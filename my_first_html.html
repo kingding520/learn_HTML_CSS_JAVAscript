@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📘 初学者的第一个HTML页面</title>
+    <!-- 
+        这是一条注释，浏览器不会显示它，但你可以在这里写笔记。
+        对于初学者：HTML就像一篇文章的骨架，下面我们一步步搭建。
+    -->
+    <style>
+        /* 这里写了一些简单的样式，让页面看起来更舒服，但初学阶段可以先忽略 */
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 25px;
+            background: #faf9f8;
+            color: #1e2b30;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #0f4c5c;
+            border-bottom: 3px solid #94c0cc;
+            padding-bottom: 5px;
+        }
+        .tip-box {
+            background: #e0f0f5;
+            border-radius: 20px;
+            padding: 18px 22px;
+            margin: 30px 0;
+            border-left: 8px solid #1e6f85;
+        }
+        code {
+            background: #dde9ef;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            color: #043845;
+        }
+        hr {
+            border: 1px dashed #b1cfdb;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 这里是网页的主标题，h1 代表最重要的标题（一般一页只有一个） -->
+    <h1>👋 你好，世界！—— 我的第一个HTML页面</h1>
+    
+    <!-- 这是一个段落 p ，用来放一段文字 -->
+    <p>欢迎你，<strong>初学者</strong>！这个页面是为你准备的。它包含了最基础、最常用的HTML标签。你可以把这段代码保存成一个 <code>.html</code> 文件，然后用浏览器打开，就能看到它变成漂亮的网页了。</p>
+
+    <!-- 小提示区域，用 div 包裹（div是通用容器，用来分组） -->
+    <div class="tip-box">
+        <p>✨ <strong>给初学者的核心提示：</strong> HTML 使用“标签”来告诉浏览器，某个东西是标题、段落、图片还是链接。大部分标签成对出现，比如 <code>&lt;p&gt;...&lt;/p&gt;</code> ，但也有少部分单标签，比如 <code>&lt;img&gt;</code> 。</p>
+    </div>
+
+    <!-- 分割线，看起来像一条线，用来分隔内容 -->
+    <hr>
+
+    <h2>📌 一、最基本的页面结构</h2>
+    <p>每一个HTML页面都有固定的基础框架：</p>
+    <!-- 下面用 pre 展示代码片段，pre 会保留空格和换行，适合展示代码 -->
+    <pre style="background:#e3f0f5; padding:20px; border-radius:24px; overflow-x:auto;">
+&lt;!DOCTYPE html&gt;                &lt;!-- 声明文档类型，告诉浏览器用的是HTML5 --&gt;
+&lt;html lang="zh"&gt;                &lt;!-- html 根标签，lang表示语言 --&gt;
+    &lt;head&gt;                      &lt;!-- head 放页面的元信息，如标题、编码等 --&gt;
+        &lt;meta charset="UTF-8"&gt;  &lt;!-- 设置字符编码为UTF-8（支持中文） --&gt;
+        &lt;title&gt;页面标题&lt;/title&gt;   &lt;!-- 浏览器标签栏上显示的标题 --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;                      &lt;!-- body 里面放所有用户能看到的内容 --&gt;
+        ... 所有可见内容 ...
+    &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+    <p>你现在看到的这个页面，就完全符合上面的结构（你可以查看一下本页面的源代码）。</p>
+
+    <hr>
+
+    <h2>✏️ 二、标题与文字</h2>
+    <p>HTML提供了6级标题，从 <code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code>，重要性依次降低：</p>
+    <!-- 演示 h1~h6 的效果 -->
+    <h1>这是h1 (标题1)</h1>
+    <h2>这是h2 (标题2)</h2>
+    <h3>这是h3 (标题3)</h3>
+    <h4>这是h4 (标题4)</h4>
+    <h5>这是h5 (标题5)</h5>
+    <h6>这是h6 (标题6)</h6>
+    <p>而这是普通的段落，用 <code>&lt;p&gt;</code> 包裹。你可以在段落里做 <strong>加粗（strong）</strong>、<em>斜体（em）</em>、<u>下划线（u）</u>、甚至 <mark>高亮标记（mark）</mark> 等等。</p>
+    
+    <hr>
+
+    <h2>🔗 三、链接与图片 (让页面丰富起来)</h2>
+    <p>超链接用 <code>&lt;a&gt;</code> 标签：<a href="https://www.bing.com" target="_blank">点击这里打开必应搜索（在新标签页）</a>。其中 <code>href</code> 属性指定链接地址，<code>target="_blank"</code> 表示新窗口打开。</p>
+    <p>图片用 <code>&lt;img&gt;</code> 标签，它只需要一个 <code>src</code> 属性指定图片路径，以及一个 <code>alt</code> 属性（图片加载失败时显示的文字，很重要！）：</p>
+    <!-- 嵌入一张来自网络的图片（这是一个免费随机图片服务） -->
+    <img src="https://picsum.photos/600/250?random=1" alt="随机风景示例图" style="max-width:100%; border-radius:28px; box-shadow: 0 10px 20px #b3cedb; margin:20px 0;">
+
+    <hr>
+
+    <h2>📋 四、列表 (有序和无序)</h2>
+    <p><code>&lt;ul&gt;</code> 无序列表，前面是圆点：</p>
+    <ul>
+        <li>学习HTML基础</li>
+        <li>学习CSS美化</li>
+        <li>学习JavaScript互动</li>
+    </ul>
+    <p><code>&lt;ol&gt;</code> 有序列表，前面是数字：</p>
+    <ol>
+        <li>打开编辑器</li>
+        <li>编写代码</li>
+        <li>保存为 .html 文件</li>
+        <li>双击用浏览器打开</li>
+    </ol>
+
+    <hr>
+
+    <h2>🧱 五、容器元素 (div 和 span)</h2>
+    <p><code>&lt;div&gt;</code> 是一个通用的块级容器，常用于布局分区。比如页面顶部的提示框就是一个 <code>div</code>。</p>
+    <p><code>&lt;span&gt;</code> 是一个行内容器，可以用来对一小段文字单独设置样式。例如：<span style="color:#1f7a8c; font-weight:bold;">这句话被span包裹，所以颜色不一样</span>，而旁边的文字正常。</p>
+
+    <hr>
+
+    <h2>📮 六、最简单的表单 (一点点互动)</h2>
+    <p>表单用 <code>&lt;form&gt;</code> 标签，里面包含各种输入元素。下面是一个极简的演示：</p>
+    <!-- 简单的表单，点击提交会弹窗提示 -->
+    <form onsubmit="event.preventDefault(); alert('演示模式：你点击了提交按钮。');" style="background:#ecf6fa; padding:25px; border-radius:30px;">
+        <label for="nickname">你的昵称：</label><br>
+        <input type="text" id="nickname" name="nickname" placeholder="比如：小明" style="padding:8px; width:80%; border-radius:40px; border:1px solid #99c6d8;"><br><br>
+
+        <label for="level">选择学习阶段：</label><br>
+        <input type="radio" id="beginner" name="level" value="beginner" checked>
+        <label for="beginner">完全小白</label><br>
+        <input type="radio" id="intermediate" name="level" value="intermediate">
+        <label for="intermediate">有一点基础</label><br><br>
+
+        <input type="checkbox" id="agree" name="agree" checked>
+        <label for="agree">我喜欢HTML (这是一个复选框)</label><br><br>
+
+        <button type="submit" style="background:#1b6f87; color:white; border:none; padding:10px 30px; border-radius:40px; font-size:1rem;">提交体验</button>
+        &nbsp;&nbsp;
+        <button type="reset" style="background:#90b8c5; color:white; border:none; padding:10px 20px; border-radius:40px;">重置</button>
+        <p style="margin-top:15px; font-size:0.9rem;">包含的标签：form, label, input (text, radio, checkbox), button。</p>
+    </form>
+
+    <hr>
+
+    <h2>📊 七、简单的表格</h2>
+    <p>用 <code>&lt;table&gt;</code> 标签可以制作表格：</p>
+    <table style="width:100%; border-collapse:collapse; background:#ffffff; border-radius:24px; overflow:hidden; box-shadow:0 8px 16px #c1dae5;">
+        <thead style="background:#1f7a8c; color:white;">
+            <tr>
+                <th style="padding:10px;">标签</th>
+                <th style="padding:10px;">作用</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom:1px solid #d0e2eb;">
+                <td style="padding:10px;">&lt;h1&gt;</td>
+                <td style="padding:10px;">主标题</td>
+            </tr>
+            <tr style="border-bottom:1px solid #d0e2eb;">
+                <td style="padding:10px;">&lt;p&gt;</td>
+                <td style="padding:10px;">段落</td>
+            </tr>
+            <tr>
+                <td style="padding:10px;">&lt;a&gt;</td>
+                <td style="padding:10px;">超链接</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 一个简单的分割 + 小结 -->
+    <hr>
+
+    <div style="background:#fcf9e8; border-radius: 30px; padding: 20px; margin: 30px 0;">
+        <h3>🎯 对于初学者，你现在已经见到了：</h3>
+        <ul style="font-size:1.1rem;">
+            <li>✅ 文档结构：<code>&lt;!DOCTYPE html&gt;</code> , <code>&lt;html&gt;</code> , <code>&lt;head&gt;</code> , <code>&lt;body&gt;</code> , <code>&lt;title&gt;</code></li>
+            <li>✅ 标题：<code>&lt;h1&gt;</code> ~ <code>&lt;h6&gt;</code></li>
+            <li>✅ 段落与格式化：<code>&lt;p&gt;</code> , <code>&lt;strong&gt;</code> , <code>&lt;em&gt;</code> , <code>&lt;u&gt;</code> , <code>&lt;mark&gt;</code></li>
+            <li>✅ 链接 <code>&lt;a&gt;</code> 和图片 <code>&lt;img&gt;</code></li>
+            <li>✅ 列表 <code>&lt;ul&gt;</code> , <code>&lt;ol&gt;</code> , <code>&lt;li&gt;</code></li>
+            <li>✅ 容器 <code>&lt;div&gt;</code> 和 <code>&lt;span&gt;</code></li>
+            <li>✅ 简单表单 <code>&lt;form&gt;</code> , <code>&lt;input&gt;</code> , <code>&lt;button&gt;</code> , <code>&lt;label&gt;</code></li>
+            <li>✅ 表格 <code>&lt;table&gt;</code> , <code>&lt;tr&gt;</code> , <code>&lt;th&gt;</code> , <code>&lt;td&gt;</code></li>
+            <li>✅ 水平线 <code>&lt;hr&gt;</code> 和注释 <code>&lt;!-- ... --&gt;</code></li>
+        </ul>
+        <p>把这些标签组合起来，你就能做出千千万万的网页了！继续加油 💪</p>
+    </div>
+
+    <!-- 页脚，一般放版权或说明 -->
+    <footer style="text-align:center; margin-top: 40px; color: #497c8d;">
+        <p>📝 初学者HTML示例 — 你可以随便修改、测试，尽情上手吧！</p>
+        <p>⭐ 下一站：CSS 样式 & JavaScript 交互</p>
+    </footer>
+
+    <!-- 再次提醒：注释不会显示在页面上，但对你理解代码很有用 -->
+</body>
+</html>
